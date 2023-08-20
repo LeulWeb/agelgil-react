@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* tailwind css  */
+.container{
+    @apply w-[80%] mx-auto py-2 max-sm:w-[95%];
+}
+
+.text_gradient {
+    @apply bg-gradient-to-r from-darkGreen via-lightGreen to-brown bg-clip-text text-transparent;
+}
+
+.section{
+    @apply w-screen ;
+}
+
+.text_section_title{
+    @apply text-3xl font-semibold text-brown text-center;
+}
+.muted{
+    @apply text-xl font-light text-gray-700
+}
