@@ -2,7 +2,7 @@ import React from 'react'
 
 const Feature = () => {
   return (
-    <section className=".section bg-stone-200 pt-3">
+    <section className=".section     bg-stone-300 pt-3">
       <div className="container">
         <p className="custom_font custom_title">Our valuable feature</p>
         <p className="muted my-4">
@@ -204,7 +204,7 @@ const Feature = () => {
         </div>
       </div>
 
-      <div className="bg-no-repeat bg-cover bg-center bg-fixed w-screen bg-deal h-screen my-6"></div>
+      <div className="bg-no-repeat bg-cover bg-center bg-fixed w-screen bg-deal h-screen mt-6"></div>
     </section>
   );
 }

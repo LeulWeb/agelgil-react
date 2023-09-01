@@ -26,11 +26,11 @@ const App = () => {
 
   return (
     <>
-      <main className="min-h-screen flex flex-col">
+      <main className="relative flex flex-col">
         <Nav />
         {/* Navbar  */}
 
-        <div className="flex-grow">
+        <div className="flex-grow ">
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/about" element={<About />}></Route>

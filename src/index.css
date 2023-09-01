@@ -33,5 +33,5 @@ body{
     @apply text-3xl font-semibold text-brown text-center;
 }
 .muted{
-    @apply text-xl font-light text-gray-700
+    @apply text-xl font-normal text-gray-800
 }

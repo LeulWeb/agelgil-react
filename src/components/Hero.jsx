@@ -2,8 +2,16 @@ import hero from '../assets/herog.png'
 
 const Hero = () => {
   return (
-    <section className=".section bg-center bg-fixed  bg-hero w-screen h-screen ">
+    <section className="section bg-center bg-cover  bg-fixed  bg-hero w-screen h-screen  flex justify-center items-center ">
       
+
+      <div className='w-full h-full bg-black/70 flex flex-col justify-center items-center'>
+          <h1 className='text-white text-3xl font-bold'>Agelgil Eco Packaging</h1>
+          <p className='text-white'>Packaging with Consideration</p>
+      </div>
+
+
+       
 
       {/* <svg
         class="frame-decoration fill-stone-200"

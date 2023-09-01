@@ -15,7 +15,8 @@ export default {
       },
       backgroundImage:{
         'deal': "url('./public/n1.JPG')",
-        'hero':"url('./public/afomia_bg.jpg')"
+        'hero':"url('./public/afomia_bg.jpg')",
+        'afomia_message': "url('./public/afomia_message.jpg')"
       }
     },
   },

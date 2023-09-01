@@ -5,7 +5,7 @@ import {Icon} from '@iconify/react'
 const Nav = () => {
   const [showMenu, setShowMenu]= useState('false')  //using string for bool !
   return (
-    <nav className=" font-poppins py-3 md:mb-3 sticky top-0 w-screen ">
+    <nav className="z-30 nav bg-black/40  backdrop-filter backdrop-blur-lg  fixed  md:mb-3   top-0 w-screen text-white ">
       <div className="container flex justify-between items-center ">
         {/* Logo */}
         <Link to="/">
