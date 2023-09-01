@@ -2,32 +2,25 @@ import {useState} from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.jpg'
 import {Icon} from '@iconify/react'
-
-
-
 const Nav = () => {
-  const [showMenu, setShowMenu]= useState('false')
-
-
-
-
-
-
+  const [showMenu, setShowMenu]= useState('false')  //using string for bool !
   return (
-    <nav className=" font-poppins py-3 md:mb-3 sticky top-0 w-screen bg-white">
+    <nav className=" font-poppins py-3 md:mb-3 sticky top-0 w-screen ">
       <div className="container flex justify-between items-center ">
         {/* Logo */}
         <Link to="/">
           {/* <img src={logo} width={150} alt="" /> */}
-          <p className="font-bold text-3xl">Agelgil</p>
+          <div className='flex flex-col items-center custom_font'>
+            <p className="font-medium text-3xl">Agelgil</p>
+            <p className='font-medium text-xl'>አግልግል</p>
+          </div>
         </Link>
 
         {/* nav link for large screens */}
         <div className="space-x-5  max-lg:hidden font-medium text-lg">
-          <Link className="hover:border-b-brown" to="/product">
-            Our products
-          </Link>
-          <Link to="/impact">Our Impact</Link>
+          <Link to='/news'>News</Link>
+          <Link to='/product'>Product</Link>
+          <Link to="/impact">Impact</Link>
           <Link to="/about">About Us</Link>
           <Link to="/contact">Contact Us</Link>
         </div>

@@ -4,7 +4,7 @@ const Feature = () => {
   return (
     <section className=".section bg-stone-200 pt-3">
       <div className="container">
-        <p className="text-center text_section_title">Our valuable feature</p>
+        <p className="custom_font custom_title">Our valuable feature</p>
         <p className="muted my-4">
           Discover a new era of packaging innovation with Agelgil Eco Packaging.
           Our sustainable materials and cutting-edge designs redefine product

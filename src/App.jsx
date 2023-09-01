@@ -10,7 +10,8 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import NotFound from './pages/NotFound'
 import NewsDetail from './pages/NewsDetail'
-
+import NewsPage from './pages/NewsPage'
+import ProductCard from './components/ProductCard'
 const App = () => {
 
   const mapFrame = `<iframe
@@ -38,7 +39,10 @@ const App = () => {
               element={<Contact mapFrame={mapFrame} />}
             ></Route>
             <Route path="/impact" element={<Impact />}></Route>
-            <Route path="/product" element={<Product />}></Route>
+            <Route path="/product" element={<Product />}>
+              <Route path='/product/:id' element={ProductCard}></Route>
+            </Route>
+            <Route path='/news' element={<NewsPage />}></Route>
             <Route path="/news/:id" element={<NewsDetail />}></Route>
             <Route path="/*" element={<NotFound />}></Route>
           </Routes>

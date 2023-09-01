@@ -14,7 +14,8 @@ export default {
         logoFont: ["Patrick Hand", "cursive"],
       },
       backgroundImage:{
-        'deal': "url('./public/n1.JPG')"
+        'deal': "url('./public/n1.JPG')",
+        'hero':"url('./public/afomia_bg.jpg')"
       }
     },
   },

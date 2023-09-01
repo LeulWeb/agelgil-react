@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.custom_font{
+    font-family: 'Pacifico', cursive;
+}
+
+.custom_title{
+    @apply text-orange-700 text-center text-3xl;
+}
+
 
 /* tailwind css  */
 .container{
