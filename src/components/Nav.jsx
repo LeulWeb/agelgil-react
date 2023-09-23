@@ -1,23 +1,60 @@
-import {useState} from 'react'
-import { Link } from 'react-router-dom'
+import {useState, useEffect, useRef} from 'react'
+import { Link, redirect } from 'react-router-dom'
 import logo from '../assets/logo.jpg'
 import {Icon} from '@iconify/react'
+import gsap from 'gsap'
+
 const Nav = () => {
-  const [showMenu, setShowMenu]= useState('false')  //using string for bool !
+  const [showMenu, setShowMenu]= useState(false)  //using string for bool
+   const [scrolling, setScrolling] = useState(false);
+  const navRef = useRef(null);
+  const linkRef = useRef(null);
+
+useEffect(() => {
+    const nav = navRef.current;
+    const link = linkRef.current;
+    const tline = gsap.timeline();
+
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+    // Gsap animation
+    tline.set(nav, {
+      autoAlpha: 0,
+      x:-50,
+    }).to(nav, {
+      autoAlpha: 1,
+      x:0,
+      delay: 1,
+      transition: 1
+    })
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
   return (
-    <nav className="z-30 nav bg-black/40  backdrop-filter backdrop-blur-lg  fixed  md:mb-3   top-0 w-screen text-white ">
-      <div className="container flex justify-between items-center ">
+    <nav   id='nav'  className={`z-30 nav fixed md:mb-3 top-0 w-screen text-white ${
+        scrolling ? 'backdrop-filter backdrop-blur-lg bg-black/40' : 'bg-transparent'
+      }`}>
+      <div ref={navRef} className="container flex justify-between items-center ">
         {/* Logo */}
         <Link to="/">
-          {/* <img src={logo} width={150} alt="" /> */}
-          <div className='flex flex-col items-center custom_font'>
+          <div  className='flex flex-col items-center custom_font'>
             <p className="font-medium text-3xl">Agelgil</p>
             <p className='font-medium text-xl'>አግልግል</p>
           </div>
         </Link>
 
-        {/* nav link for large screens */}
-        <div className="space-x-5  max-lg:hidden font-medium text-lg">
+        <div ref={linkRef}  className="space-x-5  max-lg:hidden font-medium text-lg">
           <Link to='/news'>News</Link>
           <Link to='/product'>Product</Link>
           <Link to="/impact">Impact</Link>

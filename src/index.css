@@ -7,6 +7,11 @@ body{
 }
 
 
+
+.title_animate{
+    visibility: hidden;
+}
+
 .custom_font{
     font-family: 'Pacifico', cursive;
 }
@@ -34,4 +39,8 @@ body{
 }
 .muted{
     @apply text-xl font-normal text-gray-800
+}
+
+.thin{
+    font-family: 'Quicksand', sans-serif;
 }

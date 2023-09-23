@@ -2,19 +2,23 @@ import React from 'react'
 
 const Feature = () => {
   return (
-    <section className=".section     bg-stone-300 pt-3">
+    <section className=".section     bg-stone-200 pt-3">
       <div className="container">
-        <p className="custom_font custom_title">Our valuable feature</p>
-        <p className="muted my-4">
+        <p className="custom_font custom_title font-light">Our valuable feature</p>
+        <p className="thin my-4">
           Discover a new era of packaging innovation with Agelgil Eco Packaging.
           Our sustainable materials and cutting-edge designs redefine product
           presentation. Elevate your brand's ethos, quality, and environmental
           commitment through our customized solutions.
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-16 lg:gap-10 xl:gap-16">
-          <div class="bg-white  border border-transparent  hover:shadow-lg p-4 rounded-md transition-all">
-            <button class="text-gray-600  bg-slate-100 p-2 rounded-md">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-16 lg:gap-10 xl:gap-16">
+          <div className="bg-white  border border-transparent  hover:shadow-lg  rounded-md transition-all">
+          <div className='bg-blue-500 w-full h-full relative inset-0 hover:h-0 transform '>
+
+          </div>
+          <div className='p-4'>
+              <button className="text-gray-600  bg-slate-100 p-2 rounded-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -27,22 +31,23 @@ const Feature = () => {
                 />
               </svg>
             </button>
-            <p class="text-xl font-bold mt-3 mb-2 text-gray-600 dark:text-gray-100">
+            <p className="text-xl font-bold mt-3 mb-2 text-gray-600 ">
               Sustainable
             </p>
-            <p class="text-gray-500">
+            <p className="text-gray-500">
               Emphasize the use of straw as a sustainable and renewable resource
               for creating packaging that is eco-friendly. Highlight the
               benefits of using this material over traditional packaging
               materials like plastic or paper.
             </p>
           </div>
+          </div>
 
-          <div class="bg-white  border border-transparent  hover:shadow-lg p-4 rounded-md transition-all">
-            <button class="text-gray-600  bg-slate-100 p-2 rounded-md">
+          <div className="bg-white  border border-transparent  hover:shadow-lg p-4 rounded-md transition-all">
+            <button className="text-gray-600  bg-slate-100 p-2 rounded-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-8 w-8 text-indigo-500"
+                className="h-8 w-8 text-indigo-500"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -55,18 +60,18 @@ const Feature = () => {
                 />
               </svg>
             </button>
-            <p class="text-xl font-bold mt-3 mb-2 text-gray-600 dark:text-gray-100">
+            <p className="text-xl font-bold mt-3 mb-2 text-gray-600 dark:text-gray-100">
               Biodegradable
             </p>
-            <p class="text-gray-500">
+            <p className="text-gray-500">
               packaging made from straw is biodegradable and compostable, which
               means it can be broken down naturally without harming the
               environment.
             </p>
           </div>
 
-          <div class="bg-white  border border-transparent  hover:shadow-lg p-4 rounded-md transition-all">
-            <button class="text-gray-600  bg-slate-100 p-2 rounded-md">
+          <div className="bg-white  border border-transparent  hover:shadow-lg p-4 rounded-md transition-all">
+            <button className="text-gray-600  bg-slate-100 p-2 rounded-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -82,20 +87,20 @@ const Feature = () => {
                 </g>
               </svg>
             </button>
-            <p class="text-xl font-bold mt-3 mb-2 text-gray-600 ">
-              <p class="text-xl font-bold mt-3 mb-2 text-gray-600 ">
+            <p className="text-xl font-bold mt-3 mb-2 text-gray-600 ">
+              <p className="text-xl font-bold mt-3 mb-2 text-gray-600 ">
                 Customizable
               </p>
             </p>
-            <p class="text-gray-500">
+            <p className="text-gray-500">
               offer customized designs that cater to the specific needs of your
               customers. This can include variations in size, shape, color, and
               branding options.
             </p>
           </div>
 
-          <div class="bg-white  border border-transparent  hover:shadow-lg p-4 rounded-md transition-all">
-            <button class="text-gray-600  bg-slate-100 p-2 rounded-md">
+          <div className="bg-white  border border-transparent  hover:shadow-lg p-4 rounded-md transition-all">
+            <button className="text-gray-600  bg-slate-100 p-2 rounded-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -108,8 +113,8 @@ const Feature = () => {
                 />
               </svg>
             </button>
-            <p class="text-xl font-bold mt-3 mb-2 text-gray-600 ">Durability</p>
-            <p class="text-gray-500">
+            <p className="text-xl font-bold mt-3 mb-2 text-gray-600 ">Durability</p>
+            <p className="text-gray-500">
               Highlight the durability of the packaging made from straw. This
               type of packaging can withstand the rigors of shipping and
               handling, making it an ideal choice for companies looking to ship
@@ -117,8 +122,8 @@ const Feature = () => {
             </p>
           </div>
 
-          <div class="bg-white  border border-transparent  hover:shadow-lg p-4 rounded-md transition-all">
-            <button class="text-gray-600  bg-slate-100 p-2 rounded-md">
+          <div className="bg-white  border border-transparent  hover:shadow-lg p-4 rounded-md transition-all">
+            <button className="text-gray-600  bg-slate-100 p-2 rounded-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="36"
@@ -128,41 +133,41 @@ const Feature = () => {
                 <path
                   fill="currentColor"
                   d="M21.6 29a1 1 0 0 0-1-1h-6a1 1 0 0 0 0 2h6a1 1 0 0 0 1-1Z"
-                  class="clr-i-outline clr-i-outline-path-1"
+                  className="clr-i-outline clr-i-outline-path-1"
                 />
                 <path
                   fill="currentColor"
                   d="M22.54 24h-6a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2Z"
-                  class="clr-i-outline clr-i-outline-path-2"
+                  className="clr-i-outline clr-i-outline-path-2"
                 />
                 <path
                   fill="currentColor"
                   d="M22 32h-6a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2Z"
-                  class="clr-i-outline clr-i-outline-path-3"
+                  className="clr-i-outline clr-i-outline-path-3"
                 />
                 <path
                   fill="currentColor"
                   d="M32.7 32h-7a1 1 0 0 0 0 2h7a1 1 0 0 0 0-2Z"
-                  class="clr-i-outline clr-i-outline-path-4"
+                  className="clr-i-outline clr-i-outline-path-4"
                 />
                 <path
                   fill="currentColor"
                   d="M33.7 28h-7a1 1 0 0 0 0 2h7a1 1 0 0 0 0-2Z"
-                  class="clr-i-outline clr-i-outline-path-5"
+                  className="clr-i-outline clr-i-outline-path-5"
                 />
                 <path
                   fill="currentColor"
                   d="M33.74 26a28 28 0 0 0-2.82-10.12a20.24 20.24 0 0 0-6.32-7.17L27 3.42a1 1 0 0 0-.07-1a1 1 0 0 0-.8-.42H9.8a1 1 0 0 0-.91 1.42l2.45 5.31a20.33 20.33 0 0 0-6.28 7.15c-2.15 4-2.82 8.89-3 12.28a3.6 3.6 0 0 0 1 2.71a3.79 3.79 0 0 0 2.74 1.07H12V30H5.72a1.68 1.68 0 0 1-1.21-.52a1.62 1.62 0 0 1-.45-1.23c.14-2.61.69-7.58 2.76-11.45a18 18 0 0 1 6.26-6.8h1a30.81 30.81 0 0 0-1.87 2.92a22.78 22.78 0 0 0-1.47 3.34l1.37.92a24 24 0 0 1 1.49-3.47A29.1 29.1 0 0 1 16.05 10h1a21.45 21.45 0 0 1 1.41 5a22.54 22.54 0 0 1 .32 3.86l1.58-1.11a24.15 24.15 0 0 0-.32-3A24.82 24.82 0 0 0 18.76 10h.78l.91-2h-7.24l-1.85-4h13.21l-2.5 5.47a9.93 9.93 0 0 1 1.23.78a18.63 18.63 0 0 1 5.86 6.57A26.59 26.59 0 0 1 31.73 26Z"
-                  class="clr-i-outline clr-i-outline-path-6"
+                  className="clr-i-outline clr-i-outline-path-6"
                 />
                 <path fill="none" d="M0 0h36v36H0z" />
               </svg>
             </button>
-            <p class="text-xl font-bold mt-3 mb-2 text-gray-600 ">
+            <p className="text-xl font-bold mt-3 mb-2 text-gray-600 ">
               {" "}
               Cost-effective
             </p>
-            <p class="text-gray-500">
+            <p className="text-gray-500">
               Mention that the use of straw as a packaging material can be a
               cost-effective solution for businesses. This is because the
               material is readily available and can be sourced locally in many
@@ -170,11 +175,11 @@ const Feature = () => {
             </p>
           </div>
 
-          <div class="bg-white  border border-transparent  hover:shadow-lg p-4 rounded-md transition-all">
-            <button class="text-gray-600  bg-slate-100 p-2 rounded-md">
+          <div className="bg-white  border border-transparent  hover:shadow-lg p-4 rounded-md transition-all">
+            <button className="text-gray-600  bg-slate-100 p-2 rounded-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-8 w-8 text-indigo-500"
+                className="h-8 w-8 text-indigo-500"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -193,10 +198,10 @@ const Feature = () => {
                 />
               </svg>
             </button>
-            <p class="text-xl font-bold mt-3 mb-2 text-gray-600 ">
+            <p className="text-xl font-bold mt-3 mb-2 text-gray-600 ">
               Consumer appeal
             </p>
-            <p class="text-gray-500">
+            <p className="text-gray-500">
               Finally, emphasize that eco-friendly packaging made from straw is
               something that consumers are increasingly looking for.
             </p>

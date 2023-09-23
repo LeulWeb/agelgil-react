@@ -1,37 +1,57 @@
-import hero from '../assets/herog.png'
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 
 const Hero = () => {
+  const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
+  const lineRef = useRef(null);
+  const btnRef = useRef(null);
+  useEffect(() => {
+    // Get a reference to the title element
+    const title = titleRef.current;
+    const subtitle = subtitleRef.current;
+    const line = lineRef.current;
+    const btn = btnRef.current;
+    const tline= gsap.timeline();
+    
+
+    // Use GSAP to animate the title element
+    tline.set(title, { autoAlpha: 0, y: -50 }).set(subtitle,{
+           autoAlpha: 0, y: -50 
+         }).set(line, {
+          height: 0
+         }).set(btn, {
+          autoAlpha:0,
+          y:-50,
+         })
+         .to(title, {
+           autoAlpha: 1,
+           y: 0,
+           delay: 0.2,
+         }).to(subtitle, {
+          autoAlpha: 1, // Make the title visible
+           y: 0, // Move it back to its original position
+           delay: 0.2,
+         },'-=0.2').to(line, {
+            height: 100,
+           delay: 0.2,
+         },'-=0.2').to(btn, {
+          autoAlpha: 1,
+          delay: 0.2,
+          y:0,
+         });
+  }, []);
+
   return (
-    <section className="section bg-center bg-cover  bg-fixed  bg-hero w-screen h-screen  flex justify-center items-center ">
-      
-
+    <section className="section bg-center bg-cover bg-fixed bg-hero w-screen h-screen flex justify-center items-center">
       <div className='w-full h-full bg-black/70 flex flex-col justify-center items-center'>
-          <h1 className='text-white text-3xl font-bold'>Agelgil Eco Packaging</h1>
-          <p className='text-white'>Packaging with Consideration</p>
-      </div>
-
-
-       
-
-      {/* <svg
-        class="frame-decoration fill-stone-200"
-        data-name="Layer 2"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none"
-        viewBox="0 0 1920 192.275"
-      >
-        <defs>
-          
-        </defs>
-        <title>frame-decoration</title>
-        <path
-          class=""
-          d="M0,158.755s63.9,52.163,179.472,50.736c121.494-1.5,185.839-49.738,305.984-49.733,109.21,0,181.491,51.733,300.537,50.233,123.941-1.562,225.214-50.126,390.43-50.374,123.821-.185,353.982,58.374,458.976,56.373,217.907-4.153,284.6-57.236,284.6-57.236V351.03H0V158.755Z"
-          transform="translate(0 -158.755)"
-        />
-      </svg> */}
+        <h1 ref={titleRef} className="text-white text-4xl  md:text-7xl thin">Agelgil Eco Packaging</h1>
+        <p ref={subtitleRef}  className='text-white text-xl  md:text-3xl thin py-4'>Packaging with Consideration</p>
+        <div ref={lineRef}  className="line bg-white w-1 h-36"></div>
+        <button ref={btnRef}  className='bg-transparent border px-4 py-2 mt-3 text-white'>Contact Us</button>
+      </div> 
     </section>
   );
 }
 
-export default Hero
+export default Hero;
