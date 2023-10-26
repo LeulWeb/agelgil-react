@@ -4,46 +4,53 @@ import { Link } from 'react-router-dom'
 import { Icon } from '@iconify/react'
 import Mentions from '../components/Mentions'
 
+
+import { BsNewspaper } from 'react-icons/bs'
+
+
+
 const NewsPage = () => {
   return (
     <>
       <section className="w-screen mt-20">
-            <Mentions></Mentions>
+        <Mentions></Mentions>
         <div className="container py-7">
 
           {/* Featured  Carousel */}
 
-        <div>
-        </div>
+          <div>
+          </div>
 
 
 
+          <p className="custom_font custom_title py-4">Explore More</p>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3  gap-5">
 
-            <div className="grid grid-cols-3 gap-5">
-              
-              {/* News array */}
+            {/* News array */}
 
-              {news.map((item, index)=>(
+            {news.map((item, index) => (
 
-                <Link to={`/news/${item.id}`}>
-                  <div className="card shadow-lg">
-                    <div className="h-[30vh] max-h-[30vh] overflow-hidden">
-                      <img src={item.image} alt="" className="object-cover" />
-                    </div>
-                    <p className="text-lg">{item.title}</p>
-                    <p>{item.body.substring(0, 200)}</p>
-                    <div className="flex space-x-3 items-center">
-                      <Icon icon="fluent:news-16-filled text-brown" />
-                      <p className="text-brown">read more</p>
-                    </div>
+              <Link to={`/news/${item.id}`}>
+                <div className="card shadow-lg">
+                  <div className="h-[20vh] max-h-[20vh] overflow-hidden">
+                    <img src={item.image} alt="" className="object-cover" />
                   </div>
-                </Link>
-              ))}
+                  <p className="text-lg">{item.title}</p>
+                  <p>{item.body.substring(0, 200)}</p>
+                  <div className="text-brown flex items-center space-x-3">
+
+                    <BsNewspaper />
+                    <span className="mx-2">read more</span>
+
+                  </div>
+                </div>
+              </Link>
+            ))}
 
 
-              {/* End of News */}
+            {/* End of News */}
 
-            </div>          
+          </div>
         </div>
       </section>
     </>

@@ -1,9 +1,9 @@
-import {Icon} from '@iconify/react'
+import { Icon } from '@iconify/react'
 
 const Contact = (props) => {
   return (
     <>
-      <section className="section">
+      <section className="section mt-16">
         <div className="w-screen h-[30vh]">
           <div
             dangerouslySetInnerHTML={{
@@ -84,7 +84,7 @@ const Contact = (props) => {
             {/* contact Form  */}
 
             <div>
-              <form action="" method="post">
+              <form action="https://formsubmit.co/agelgil.packaging" method="post">
                 <input
                   type="text"
                   name="Name"

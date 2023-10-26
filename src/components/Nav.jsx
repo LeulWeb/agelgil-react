@@ -1,16 +1,16 @@
-import {useState, useEffect, useRef} from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link, redirect } from 'react-router-dom'
 import logo from '../assets/logo.jpg'
-import {Icon} from '@iconify/react'
+import { Icon } from '@iconify/react'
 import gsap from 'gsap'
 
 const Nav = () => {
-  const [showMenu, setShowMenu]= useState(false)  //using string for bool
-   const [scrolling, setScrolling] = useState(false);
+  const [showMenu, setShowMenu] = useState(false)  //using string for bool
+  const [scrolling, setScrolling] = useState(false);
   const navRef = useRef(null);
   const linkRef = useRef(null);
 
-useEffect(() => {
+  useEffect(() => {
     const nav = navRef.current;
     const link = linkRef.current;
     const tline = gsap.timeline();
@@ -25,10 +25,10 @@ useEffect(() => {
     // Gsap animation
     tline.set(nav, {
       autoAlpha: 0,
-      x:-50,
+      x: -50,
     }).to(nav, {
       autoAlpha: 1,
-      x:0,
+      x: 0,
       delay: 1,
       transition: 1
     })
@@ -42,21 +42,20 @@ useEffect(() => {
 
 
   return (
-    <nav   id='nav'  className={`z-30 nav fixed md:mb-3 top-0 w-screen text-white ${
-        scrolling ? 'backdrop-filter backdrop-blur-lg bg-black/40' : 'bg-transparent'
+    <nav id='nav' className={`z-30 nav fixed md:mb-3 top-0 w-screen text-white ${scrolling ? 'backdrop-filter backdrop-blur-lg bg-black/40' : 'backdrop-filter backdrop-blur-lg bg-black/40'
       }`}>
       <div ref={navRef} className="container flex justify-between items-center ">
         {/* Logo */}
         <Link to="/">
-          <div  className='flex flex-col items-center custom_font'>
+          <div className='flex flex-col items-center custom_font'>
             <p className="font-medium text-3xl">Agelgil</p>
             <p className='font-medium text-xl'>አግልግል</p>
           </div>
         </Link>
 
-        <div ref={linkRef}  className="space-x-5  max-lg:hidden font-medium text-lg">
+        <div ref={linkRef} className="space-x-5  max-lg:hidden font-medium text-lg">
           <Link to='/news'>News</Link>
-          <Link to='/product'>Product</Link>
+          {/* <Link to='/product'>Product</Link> */}
           <Link to="/impact">Impact</Link>
           <Link to="/about">About Us</Link>
           <Link to="/contact">Contact Us</Link>
