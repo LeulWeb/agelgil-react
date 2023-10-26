@@ -6,8 +6,8 @@ import dam from '../assets/dam.jpeg'
 const Impact = () => {
   return (
     <>
-      <section className="section">
-        <div className="container">
+      <section className="section mt-16">
+        <div className="container py-7">
           <p className="text-center text_section_title py-4">Our Impact</p>
 
           <p className="muted">

@@ -84,7 +84,7 @@ const Contact = (props) => {
             {/* contact Form  */}
 
             <div>
-              <form action="https://formsubmit.co/agelgil.packaging" method="post">
+              <form action="https://formsubmit.co/afomia@agelgileco-package.com" method="post">
                 <input
                   type="text"
                   name="Name"
